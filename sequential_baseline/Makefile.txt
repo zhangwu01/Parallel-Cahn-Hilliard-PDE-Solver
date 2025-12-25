@@ -1,0 +1,11 @@
+CXX = g++
+CXXFLAGS = -std=c++11 -g -Wall -Wextra -Wpedantic
+LIBS = -lpapi
+
+.PHONY: clean
+
+cahn_hilliard:
+	$(CXX) $(CXXFLAGS) -o sequential sequential.cpp $(LIBS)
+
+plot:
+	python plot.py
