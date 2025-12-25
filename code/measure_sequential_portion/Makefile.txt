@@ -1,0 +1,22 @@
+# File       : Makefile
+# Description: Makefile for  CahnHilliard system
+# Copyright 2023 Harvard University. All Rights Reserved.
+# TODO: ensure support for OpenMP
+CXX = mpic++
+CXXFLAGS = -g -O2 -Wall -Wextra -Wpedantic -DOMPI_SKIP_MPICXX -fopenmp
+.PHONY: clean clean_pedantic
+
+main: main.cpp CahnHilliard.o
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+%.o: %.cpp %.h
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
+plot: final.bin
+	python plot.py -f $<
+
+clean:
+	rm -f main *.o
+
+clean_pedantic: clean
+	rm -f *.png *.bin
