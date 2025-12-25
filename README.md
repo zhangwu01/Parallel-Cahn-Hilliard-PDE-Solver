@@ -64,6 +64,7 @@ Parallel-Cahn-Hilliard-PDE-Solver/
     ── performance_multiple_threads.sh
     ── plot.py
 │ 
+├── LICENSE
 ├── .gitignore
 ├── README.md  
 
@@ -73,8 +74,8 @@ Parallel-Cahn-Hilliard-PDE-Solver/
 - sp1: clone our git repo on cluster and navigate into the 'code' folder:
 ```bash
 $ module load git/2.17.0-fasrc01
-$ git clone git@code.harvard.edu:CS205/team13.git
-$ cd ./team13/code
+$ git clone https://github.com/zhangwu01/Parallel-Cahn-Hilliard-PDE-Solver.git
+$ cd ./Parallel-Cahn-Hilliard-PDE-Solver/code
 ```
 
 - sp2: compile the code with the command:
