@@ -46,23 +46,6 @@ Parallel-Cahn-Hilliard-PDE-Solver/
     ├── example_job.sh
     ├── main.cpp
     ├── plot.py
-|
-└── code_alternative_implementation/
-    ── measure_sequential_portion
-        ├── CahnHilliard.cpp
-        ├── CahnHilliard.h
-        ├── Makefile
-        ├── main.cpp
-        ├── plot.py
-        ├── time_parallel.sh
-    ── CahnHilliard.cpp
-    ── CahnHilliard.h  
-    ── Makefile
-    ── main.cpp
-    ── performance_multiple_both.sh
-    ── performance_multiple_ranks.sh
-    ── performance_multiple_threads.sh
-    ── plot.py
 │ 
 ├── LICENSE
 ├── .gitignore
